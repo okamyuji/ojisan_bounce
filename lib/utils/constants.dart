@@ -6,7 +6,7 @@ import 'dart:ui';
 /// ゲーム設定
 class GameConfig {
   static const int maxTurns = 20; // 最大ターン数（デフォルト、難易度で上書きされる）
-  static const int targetJusticePoints = 100; // 目標正義ポイント（デフォルト）
+  static const int targetJusticePoints = 100; // 目標ポイント（デフォルト）
   static const int minOjisanDefeated = 10; // 最低撃退数（デフォルト）
   static const int totalStations = 7; // 駅の総数
 

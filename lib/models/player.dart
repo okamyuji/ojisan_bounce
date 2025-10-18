@@ -11,7 +11,7 @@ part 'player.g.dart';
 class Player with _$Player {
   const factory Player({
     @Default(0) int currentStationId, // 現在の駅ID
-    @Default(0) int justicePoints, // 正義ポイント
+    @Default(0) int justicePoints, // ポイント
     @Default(0) int ojisanDefeated, // 撃退したおじさん数
     @Default([0]) List<int> visitedStations, // 訪問済み駅IDリスト
     @Default(0) int turnCount, // 現在のターン数
@@ -35,7 +35,7 @@ extension PlayerExtension on Player {
     return copyWith(visitedStations: [...visitedStations, stationId]);
   }
 
-  /// 正義ポイントを追加
+  /// ポイントを追加
   Player addJusticePoints(int points) {
     return copyWith(justicePoints: justicePoints + points);
   }

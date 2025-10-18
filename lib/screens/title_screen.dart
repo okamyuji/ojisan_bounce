@@ -66,7 +66,7 @@ class _TitleScreenState extends ConsumerState<TitleScreen> {
                                 horizontal: 32,
                               ),
                               child: Text(
-                                '正義の味方となって悪質おじさんを退治しよう！',
+                                '弱者の味方となって悪質おじさんを退治しよう！',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 14,

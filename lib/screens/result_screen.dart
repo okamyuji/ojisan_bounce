@@ -72,7 +72,7 @@ class ResultScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  isWon ? 'あなたは正義の味方です！' : 'もう一度チャレンジしよう！',
+                  isWon ? 'あなたは弱者の味方です！' : 'もう一度チャレンジしよう！',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white.withValues(alpha: 0.9),
@@ -114,7 +114,7 @@ class ResultScreen extends ConsumerWidget {
                             GameConfig.totalStations,
                       ),
                       _buildScoreRow(
-                        '正義ポイント',
+                        'ポイント',
                         '${player.justicePoints}',
                         '/ ${gameState.difficulty.targetJusticePoints}',
                         player.justicePoints >=

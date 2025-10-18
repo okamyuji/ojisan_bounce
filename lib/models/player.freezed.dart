@@ -22,7 +22,7 @@ Player _$PlayerFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Player {
   int get currentStationId => throw _privateConstructorUsedError; // 現在の駅ID
-  int get justicePoints => throw _privateConstructorUsedError; // 正義ポイント
+  int get justicePoints => throw _privateConstructorUsedError; // ポイント
   int get ojisanDefeated => throw _privateConstructorUsedError; // 撃退したおじさん数
   List<int> get visitedStations =>
       throw _privateConstructorUsedError; // 訪問済み駅IDリスト
@@ -185,7 +185,7 @@ class _$PlayerImpl implements _Player {
   @override
   @JsonKey()
   final int justicePoints;
-  // 正義ポイント
+  // ポイント
   @override
   @JsonKey()
   final int ojisanDefeated;
@@ -268,7 +268,7 @@ abstract class _Player implements Player {
   @override
   int get currentStationId; // 現在の駅ID
   @override
-  int get justicePoints; // 正義ポイント
+  int get justicePoints; // ポイント
   @override
   int get ojisanDefeated; // 撃退したおじさん数
   @override

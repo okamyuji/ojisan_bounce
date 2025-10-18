@@ -38,7 +38,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
     TutorialStep(
       emoji: '⚖️',
       title: 'ポイントを獲得',
-      description: 'Perfect/Great/Goodで正義ポイントを獲得。\n目標ポイントに到達しよう！',
+      description: 'Perfect/Great/Goodでポイントを獲得。\n目標ポイントに到達しよう！',
     ),
     TutorialStep(
       emoji: '🏆',

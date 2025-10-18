@@ -133,7 +133,7 @@ class GameLogic {
 
   /// 勝利条件チェック
   /// @param visitedStationsCount: 訪問済み駅数
-  /// @param justicePoints: 正義ポイント
+  /// @param justicePoints: ポイント
   /// @param ojisanDefeated: 撃退数
   /// @param totalStations: 駅の総数
   /// @return true: 勝利, false: 未達成
