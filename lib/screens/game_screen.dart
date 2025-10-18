@@ -95,12 +95,20 @@ class _GameScreenState extends ConsumerState<GameScreen> {
             '駅',
             '${gameState.player.visitedStations.toSet().length}/${gameState.stations.length}',
           ),
-          _buildStatusItem('⚖️', 'ポイント', '${gameState.player.justicePoints}'),
-          _buildStatusItem('👊', '撃退', '${gameState.player.ojisanDefeated}'),
+          _buildStatusItem(
+            '⚖️',
+            'ポイント',
+            '${gameState.player.justicePoints}/${gameState.difficulty.targetJusticePoints}',
+          ),
+          _buildStatusItem(
+            '👊',
+            '撃退',
+            '${gameState.player.ojisanDefeated}/${gameState.difficulty.minOjisanDefeated}',
+          ),
           _buildStatusItem(
             '🎲',
             'ターン',
-            '${gameState.player.turnCount}/${GameConfig.maxTurns}',
+            '${gameState.player.turnCount}/${gameState.difficulty.maxTurns}',
           ),
         ],
       ),
@@ -131,7 +139,7 @@ class _GameScreenState extends ConsumerState<GameScreen> {
         Text(
           value,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 14,
             fontWeight: FontWeight.bold,
             color: Colors.white,
             shadows: [

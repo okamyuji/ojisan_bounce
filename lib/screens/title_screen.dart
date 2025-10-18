@@ -122,7 +122,7 @@ class _TitleScreenState extends ConsumerState<TitleScreen> {
                                 ),
                               ),
                               const SizedBox(height: 6),
-                              _buildGoal('✓ 全7駅訪問・ポイント100以上・撃退10人以上'),
+                              _buildGoalForDifficulty(_selectedDifficulty),
                             ],
                           ),
                         ),
@@ -243,6 +243,13 @@ class _TitleScreenState extends ConsumerState<TitleScreen> {
         style: const TextStyle(fontSize: 12, color: AppColors.textSecondary),
       ),
     );
+  }
+
+  Widget _buildGoalForDifficulty(DifficultyLevel difficulty) {
+    final settings = DifficultySettings.fromLevel(difficulty);
+    final goalText =
+        '✓ 全7駅訪問・ポイント${settings.targetJusticePoints}以上・撃退${settings.minOjisanDefeated}人以上';
+    return _buildGoal(goalText);
   }
 
   Widget _buildDifficultyButton(DifficultyLevel level) {

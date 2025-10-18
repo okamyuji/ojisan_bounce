@@ -45,180 +45,183 @@ class ResultScreen extends ConsumerWidget {
           ),
         ),
         child: SafeArea(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // 結果表示
-                Text(
-                  isWon ? '🎉' : '😢',
-                  style: const TextStyle(fontSize: 100),
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  isWon ? 'ゲームクリア！' : 'ゲームオーバー',
-                  style: TextStyle(
-                    fontSize: 48,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    shadows: [
-                      Shadow(
-                        blurRadius: 10.0,
-                        color: Colors.black.withValues(alpha: 0.3),
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 32),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // 結果表示
+                  Text(
+                    isWon ? '🎉' : '😢',
+                    style: const TextStyle(fontSize: 100),
                   ),
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  isWon ? 'あなたは弱者の味方です！' : 'もう一度チャレンジしよう！',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white.withValues(alpha: 0.9),
+                  const SizedBox(height: 24),
+                  Text(
+                    isWon ? 'ゲームクリア！' : 'ゲームオーバー',
+                    style: TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      shadows: [
+                        Shadow(
+                          blurRadius: 10.0,
+                          color: Colors.black.withValues(alpha: 0.3),
+                          offset: const Offset(0, 4),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(height: 48),
+                  const SizedBox(height: 16),
+                  Text(
+                    isWon ? 'あなたは弱者の味方です！' : 'もう一度チャレンジしよう！',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white.withValues(alpha: 0.9),
+                    ),
+                  ),
+                  const SizedBox(height: 48),
 
-                // スコア表示
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 32),
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.1),
-                        blurRadius: 20,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
+                  // スコア表示
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 32),
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.1),
+                          blurRadius: 20,
+                          offset: const Offset(0, 10),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'リザルト',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.textPrimary,
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        _buildScoreRow(
+                          '訪問した駅',
+                          '${player.visitedStations.toSet().length}',
+                          '/ ${GameConfig.totalStations}',
+                          player.visitedStations.toSet().length >=
+                              GameConfig.totalStations,
+                        ),
+                        _buildScoreRow(
+                          'ポイント',
+                          '${player.justicePoints}',
+                          '/ ${gameState.difficulty.targetJusticePoints}',
+                          player.justicePoints >=
+                              gameState.difficulty.targetJusticePoints,
+                        ),
+                        _buildScoreRow(
+                          '撃退数',
+                          '${player.ojisanDefeated}',
+                          '/ ${gameState.difficulty.minOjisanDefeated}人',
+                          player.ojisanDefeated >=
+                              gameState.difficulty.minOjisanDefeated,
+                        ),
+                        _buildScoreRow(
+                          'ターン数',
+                          '${player.turnCount}',
+                          '/ ${gameState.difficulty.maxTurns}',
+                          false,
+                        ),
+                        const SizedBox(height: 8),
+                        const Divider(),
+                        const SizedBox(height: 8),
+                        Text(
+                          '難易度: ${gameState.difficulty.level.displayName}',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.textSecondary,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  child: Column(
+                  const SizedBox(height: 48),
+
+                  // ボタン
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'リザルト',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.textPrimary,
+                      ElevatedButton(
+                        onPressed: () {
+                          ref.read(gameProvider.notifier).resetGame();
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const TitleScreen(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: isWon
+                              ? AppColors.success
+                              : AppColors.danger,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 32,
+                            vertical: 16,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          elevation: 8,
+                        ),
+                        child: const Text(
+                          'タイトルに戻る',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 24),
-                      _buildScoreRow(
-                        '訪問した駅',
-                        '${player.visitedStations.toSet().length}',
-                        '/ ${GameConfig.totalStations}',
-                        player.visitedStations.toSet().length >=
-                            GameConfig.totalStations,
-                      ),
-                      _buildScoreRow(
-                        'ポイント',
-                        '${player.justicePoints}',
-                        '/ ${gameState.difficulty.targetJusticePoints}',
-                        player.justicePoints >=
-                            gameState.difficulty.targetJusticePoints,
-                      ),
-                      _buildScoreRow(
-                        '撃退数',
-                        '${player.ojisanDefeated}',
-                        '/ ${gameState.difficulty.minOjisanDefeated}人',
-                        player.ojisanDefeated >=
-                            gameState.difficulty.minOjisanDefeated,
-                      ),
-                      _buildScoreRow(
-                        'ターン数',
-                        '${player.turnCount}',
-                        '/ ${gameState.difficulty.maxTurns}',
-                        false,
-                      ),
-                      const SizedBox(height: 8),
-                      const Divider(),
-                      const SizedBox(height: 8),
-                      Text(
-                        '難易度: ${gameState.difficulty.level.displayName}',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.textSecondary,
+                      const SizedBox(width: 16),
+                      ElevatedButton(
+                        onPressed: () {
+                          ref.read(gameProvider.notifier).resetGame();
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) => const GameScreen(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: isWon
+                              ? AppColors.success
+                              : AppColors.danger,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 32,
+                            vertical: 16,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          elevation: 8,
+                        ),
+                        child: const Text(
+                          'もう一度',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ],
                   ),
-                ),
-                const SizedBox(height: 48),
-
-                // ボタン
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        ref.read(gameProvider.notifier).resetGame();
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (context) => const TitleScreen(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: isWon
-                            ? AppColors.success
-                            : AppColors.danger,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 32,
-                          vertical: 16,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        elevation: 8,
-                      ),
-                      child: const Text(
-                        'タイトルに戻る',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        ref.read(gameProvider.notifier).resetGame();
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (context) => const GameScreen(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: isWon
-                            ? AppColors.success
-                            : AppColors.danger,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 32,
-                          vertical: 16,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        elevation: 8,
-                      ),
-                      child: const Text(
-                        'もう一度',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

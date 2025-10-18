@@ -1,6 +1,7 @@
 /// ゲーム全体の状態管理
 library;
 
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ojisan_bounce/models/difficulty.dart';
 import 'package:ojisan_bounce/models/ojisan.dart';
@@ -43,9 +44,17 @@ class GameState with _$GameState {
     List<Station> stations, {
     DifficultyLevel difficultyLevel = DifficultyLevel.normal,
   }) {
+    // 初期駅（駅0）を訪問済みに設定
+    final initialStations = stations.map((station) {
+      if (station.id == 0) {
+        return station.copyWith(visited: true);
+      }
+      return station;
+    }).toList();
+
     return GameState(
       player: const Player(),
-      stations: stations,
+      stations: initialStations,
       phase: GamePhase.idle,
       difficulty: DifficultySettings.fromLevel(difficultyLevel),
     );
@@ -70,15 +79,33 @@ extension GameStateExtension on GameState {
     final hasEnoughDefeats =
         player.ojisanDefeated >= difficulty.minOjisanDefeated;
 
+    // デバッグログ（開発時のみ）
+    if (kDebugMode) {
+      debugPrint('🏁 ゲーム終了判定:');
+      debugPrint(
+        '   訪問駅数: ${player.visitedStations.toSet().length}/${stations.length} → $hasVisitedAll',
+      );
+      debugPrint(
+        '   ポイント: ${player.justicePoints}/${difficulty.targetJusticePoints} → $hasEnoughPoints',
+      );
+      debugPrint(
+        '   撃退数: ${player.ojisanDefeated}/${difficulty.minOjisanDefeated} → $hasEnoughDefeats',
+      );
+      debugPrint('   ターン数: ${player.turnCount}/${difficulty.maxTurns}');
+    }
+
     if (hasVisitedAll && hasEnoughPoints && hasEnoughDefeats) {
+      if (kDebugMode) debugPrint('   ✅ 勝利条件達成！');
       return true;
     }
 
     // 敗北条件チェック（最大ターン数超過）
     if (player.turnCount >= difficulty.maxTurns) {
+      if (kDebugMode) debugPrint('   ❌ ターン数超過で敗北');
       return true;
     }
 
+    if (kDebugMode) debugPrint('   ⏳ ゲーム継続中');
     return false;
   }
 

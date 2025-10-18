@@ -20,6 +20,7 @@ class GameNotifier extends Notifier<GameState> {
   final DataLoader _dataLoader = DataLoader();
   Timer? _phaseTimer;
   List<Map<String, dynamic>>? _ojisanTypes;
+  DifficultyLevel _currentDifficulty = DifficultyLevel.normal;
 
   @override
   GameState build() {
@@ -36,7 +37,7 @@ class GameNotifier extends Notifier<GameState> {
   Future<void> _loadData() async {
     final stations = await _dataLoader.loadStations();
     _ojisanTypes = await _dataLoader.loadOjisanTypes();
-    state = GameState.initial(stations);
+    state = GameState.initial(stations, difficultyLevel: _currentDifficulty);
   }
 
   /// 初期状態を作成（リセット用）
@@ -51,6 +52,7 @@ class GameNotifier extends Notifier<GameState> {
 
   /// 難易度を設定
   void setDifficulty(DifficultyLevel difficulty) {
+    _currentDifficulty = difficulty;
     state = state.copyWith(
       difficulty: DifficultySettings.fromLevel(difficulty),
     );
@@ -59,7 +61,7 @@ class GameNotifier extends Notifier<GameState> {
   /// ゲームをリセット
   Future<void> resetGame() async {
     _phaseTimer?.cancel();
-    state = await _createInitialState();
+    state = await _createInitialState(_currentDifficulty);
   }
 
   /// サイコロを振る
