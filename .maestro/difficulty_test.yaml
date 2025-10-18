@@ -1,0 +1,26 @@
+appId: com.example.ojisanBounce
+---
+- launchApp
+- assertVisible: "おじさんバウンス"
+- assertVisible: "難易度を選択"
+
+# かんたん選択（左の絵文字をタップ）
+- tapOn:
+    point: "25%,55%"
+- waitForAnimationToEnd
+
+# ふつう選択（中央の絵文字をタップ）
+- tapOn:
+    point: "50%,55%"
+- waitForAnimationToEnd
+
+# むずかしい選択（右の絵文字をタップ）
+- tapOn:
+    point: "75%,55%"
+- waitForAnimationToEnd
+
+# ゲームスタート
+- tapOn: "ゲームスタート"
+- waitForAnimationToEnd
+- assertVisible: "サイコロで駅を移動"
+

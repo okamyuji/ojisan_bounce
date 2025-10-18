@@ -1,0 +1,91 @@
+{
+  "stations": [
+    {
+      "id": 0,
+      "name": "始発駅",
+      "x": 0.2,
+      "y": 0.8,
+      "emoji": "🚉"
+    },
+    {
+      "id": 1,
+      "name": "商店街駅",
+      "x": 0.3,
+      "y": 0.6,
+      "emoji": "🏪"
+    },
+    {
+      "id": 2,
+      "name": "オフィス街駅",
+      "x": 0.5,
+      "y": 0.4,
+      "emoji": "🏢"
+    },
+    {
+      "id": 3,
+      "name": "繁華街駅",
+      "x": 0.7,
+      "y": 0.3,
+      "emoji": "🌃"
+    },
+    {
+      "id": 4,
+      "name": "公園前駅",
+      "x": 0.8,
+      "y": 0.5,
+      "emoji": "🌳"
+    },
+    {
+      "id": 5,
+      "name": "住宅街駅",
+      "x": 0.6,
+      "y": 0.7,
+      "emoji": "🏠"
+    },
+    {
+      "id": 6,
+      "name": "終点駅",
+      "x": 0.4,
+      "y": 0.9,
+      "emoji": "🏁"
+    }
+  ],
+  "ojisan_types": [
+    {
+      "id": "mansplainer",
+      "name": "マンスプおじさん",
+      "evilness": 1,
+      "emoji": "🤓",
+      "basePoints": 10
+    },
+    {
+      "id": "stalker",
+      "name": "ストーカーおじさん",
+      "evilness": 2,
+      "emoji": "👀",
+      "basePoints": 20
+    },
+    {
+      "id": "smoker",
+      "name": "路上喫煙おじさん",
+      "evilness": 3,
+      "emoji": "🚬",
+      "basePoints": 30
+    },
+    {
+      "id": "drunk",
+      "name": "酔っ払いおじさん",
+      "evilness": 4,
+      "emoji": "🍺",
+      "basePoints": 40
+    },
+    {
+      "id": "harasser",
+      "name": "ハラスメントおじさん",
+      "evilness": 5,
+      "emoji": "😡",
+      "basePoints": 50
+    }
+  ]
+}
+

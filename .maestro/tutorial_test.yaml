@@ -1,0 +1,40 @@
+appId: com.example.ojisanBounce
+---
+- launchApp
+- assertVisible: "おじさんバウンス"
+- assertVisible: "ゲームスタート"
+
+# チュートリアル開始
+- tapOn: "ゲームスタート"
+- assertVisible: "チュートリアル 1/5"
+- assertVisible: "🎲"
+- assertVisible: "サイコロで駅を移動"
+
+# ステップ2へ
+- tapOn: "次へ"
+- assertVisible: "チュートリアル 2/5"
+- assertVisible: "😠"
+- assertVisible: "悪質おじさんと遭遇"
+
+# ステップ3へ
+- tapOn: "次へ"
+- assertVisible: "チュートリアル 3/5"
+- assertVisible: "👊"
+- assertVisible: "タイミングよくタップ"
+
+# ステップ4へ
+- tapOn: "次へ"
+- assertVisible: "チュートリアル 4/5"
+- assertVisible: "⚖️"
+- assertVisible: "ポイントを獲得"
+
+# ステップ5へ
+- tapOn: "次へ"
+- assertVisible: "チュートリアル 5/5"
+- assertVisible: "🏆"
+- assertVisible: "勝利条件"
+
+# ゲーム開始
+- tapOn: "ゲームスタート"
+- assertVisible: "サイコロを振る"
+

@@ -1,0 +1,52 @@
+appId: com.example.ojisanBounce
+---
+- launchApp
+- assertVisible: "おじさんバウンス"
+- assertVisible: "ゲームスタート"
+
+# タイトル画面からチュートリアルへ
+- tapOn: "ゲームスタート"
+- assertVisible: "チュートリアル 1/5"
+- assertVisible: "サイコロで駅を移動"
+
+# チュートリアルをスキップ
+- tapOn: "スキップ"
+- assertVisible: "サイコロを振る"
+
+# ゲーム開始 - サイコロを振る
+- tapOn: "サイコロを振る"
+- waitForAnimationToEnd
+
+# 遭遇フェーズまたはアイドルフェーズを待つ
+- runFlow:
+    when:
+      visible: "タイミングよくタップ！"
+    commands:
+      # おじさんとの遭遇
+      - assertVisible: "タイミングよくタップ！"
+      - tapOn: "TAP!"
+      - waitForAnimationToEnd
+
+# 次のターン
+- runFlow:
+    when:
+      visible: "サイコロを振る"
+    commands:
+      - tapOn: "サイコロを振る"
+      - waitForAnimationToEnd
+
+# 遭遇チェック2回目
+- runFlow:
+    when:
+      visible: "タイミングよくタップ！"
+    commands:
+      - tapOn: "TAP!"
+      - waitForAnimationToEnd
+
+# ゲームが継続していることを確認
+- runFlow:
+    when:
+      visible: "サイコロを振る"
+    commands:
+      - assertVisible: "ターン"
+

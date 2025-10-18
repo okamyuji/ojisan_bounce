@@ -1,0 +1,12 @@
+appId: com.example.ojisanBounce
+---
+- launchApp
+- assertVisible: "おじさんバウンス"
+- assertVisible: "難易度を選択"
+- assertVisible: "ゲームスタート"
+
+# ゲームスタートボタンをタップ（デフォルトでふつうが選択されている）
+- tapOn: "ゲームスタート"
+- waitForAnimationToEnd
+- assertVisible: "サイコロで駅を移動"
+
