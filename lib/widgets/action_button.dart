@@ -58,46 +58,52 @@ class _ActionButtonState extends State<ActionButton>
   }
 
   Widget _buildButton() {
-    return GestureDetector(
-      onTap: widget.isActive ? widget.onTap : null,
-      child: Container(
-        width: 120,
-        height: 120,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: widget.isActive
-                ? [AppColors.accent, AppColors.accent.withValues(alpha: 0.8)]
-                : [Colors.grey, Colors.grey.shade400],
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: widget.isActive
-                  ? AppColors.accent.withValues(alpha: 0.4)
-                  : Colors.grey.withValues(alpha: 0.4),
-              blurRadius: 20,
-              spreadRadius: 2,
-              offset: const Offset(0, 8),
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: widget.isActive ? widget.onTap : null,
+        customBorder: const CircleBorder(),
+        splashColor: Colors.white.withValues(alpha: 0.3),
+        highlightColor: Colors.white.withValues(alpha: 0.1),
+        child: Container(
+          width: 140,
+          height: 140,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: widget.isActive
+                  ? [AppColors.accent, AppColors.accent.withValues(alpha: 0.8)]
+                  : [Colors.grey, Colors.grey.shade400],
             ),
-          ],
-        ),
-        child: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.touch_app, size: 48, color: Colors.white),
-              SizedBox(height: 4),
-              Text(
-                'TAP!',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+            boxShadow: [
+              BoxShadow(
+                color: widget.isActive
+                    ? AppColors.accent.withValues(alpha: 0.4)
+                    : Colors.grey.withValues(alpha: 0.4),
+                blurRadius: 20,
+                spreadRadius: 2,
+                offset: const Offset(0, 8),
               ),
             ],
+          ),
+          child: const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.touch_app, size: 52, color: Colors.white),
+                SizedBox(height: 6),
+                Text(
+                  'TAP!',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

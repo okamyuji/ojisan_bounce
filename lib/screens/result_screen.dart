@@ -54,13 +54,13 @@ class ResultScreen extends ConsumerWidget {
                   // 結果表示
                   Text(
                     isWon ? '🎉' : '😢',
-                    style: const TextStyle(fontSize: 100),
+                    style: const TextStyle(fontSize: 60),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 12),
                   Text(
                     isWon ? 'ゲームクリア！' : 'ゲームオーバー',
                     style: TextStyle(
-                      fontSize: 48,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       shadows: [
@@ -72,15 +72,15 @@ class ResultScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 8),
                   Text(
                     isWon ? 'あなたは弱者の味方です！' : 'もう一度チャレンジしよう！',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       color: Colors.white.withValues(alpha: 0.9),
                     ),
                   ),
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 24),
 
                   // スコア表示
                   Container(
@@ -102,12 +102,12 @@ class ResultScreen extends ConsumerWidget {
                         Text(
                           'リザルト',
                           style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: AppColors.textPrimary,
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 16),
                         _buildScoreRow(
                           '訪問した駅',
                           '${player.visitedStations.toSet().length}',
@@ -135,13 +135,13 @@ class ResultScreen extends ConsumerWidget {
                           '/ ${gameState.difficulty.maxTurns}',
                           false,
                         ),
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 4),
                         const Divider(),
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 4),
                         Text(
                           '難易度: ${gameState.difficulty.level.displayName}',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                             color: AppColors.textSecondary,
                           ),
@@ -149,76 +149,109 @@ class ResultScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 24),
 
                   // ボタン
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          ref.read(gameProvider.notifier).resetGame();
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => const TitleScreen(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                ref.read(gameProvider.notifier).resetGame();
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => const TitleScreen(),
+                                  ),
+                                );
+                              },
+                              borderRadius: BorderRadius.circular(30),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                  vertical: 16,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withValues(
+                                        alpha: 0.2,
+                                      ),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  'タイトルに戻る',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: isWon
+                                        ? AppColors.success
+                                        : AppColors.danger,
+                                  ),
+                                ),
+                              ),
                             ),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: isWon
-                              ? AppColors.success
-                              : AppColors.danger,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 32,
-                            vertical: 16,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          elevation: 8,
-                        ),
-                        child: const Text(
-                          'タイトルに戻る',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 16),
-                      ElevatedButton(
-                        onPressed: () {
-                          ref.read(gameProvider.notifier).resetGame();
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(
-                              builder: (context) => const GameScreen(),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                ref.read(gameProvider.notifier).resetGame();
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => const GameScreen(),
+                                  ),
+                                );
+                              },
+                              borderRadius: BorderRadius.circular(30),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                  vertical: 16,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withValues(
+                                        alpha: 0.2,
+                                      ),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  'もう一度',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: isWon
+                                        ? AppColors.success
+                                        : AppColors.danger,
+                                  ),
+                                ),
+                              ),
                             ),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          foregroundColor: isWon
-                              ? AppColors.success
-                              : AppColors.danger,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 32,
-                            vertical: 16,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          elevation: 8,
-                        ),
-                        child: const Text(
-                          'もう一度',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -236,14 +269,14 @@ class ResultScreen extends ConsumerWidget {
     bool isAchieved,
   ) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             label,
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               color: AppColors.textSecondary,
             ),
           ),
@@ -252,7 +285,7 @@ class ResultScreen extends ConsumerWidget {
               Text(
                 value,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: isAchieved ? AppColors.success : AppColors.textPrimary,
                 ),
@@ -260,16 +293,16 @@ class ResultScreen extends ConsumerWidget {
               Text(
                 ' $target',
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   color: AppColors.textSecondary,
                 ),
               ),
               if (isAchieved) ...[
-                const SizedBox(width: 8),
+                const SizedBox(width: 6),
                 const Icon(
                   Icons.check_circle,
                   color: AppColors.success,
-                  size: 24,
+                  size: 20,
                 ),
               ],
             ],
