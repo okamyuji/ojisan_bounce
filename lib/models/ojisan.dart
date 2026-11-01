@@ -8,7 +8,7 @@ part 'ojisan.g.dart';
 
 /// おじさんモデル
 @freezed
-class Ojisan with _$Ojisan {
+abstract class Ojisan with _$Ojisan {
   const factory Ojisan({
     required String id,
     required String name,
@@ -54,7 +54,7 @@ extension TimingResultExtension on TimingResult {
 
 /// おじさんとの遭遇イベント
 @freezed
-class OjisanEncounter with _$OjisanEncounter {
+abstract class OjisanEncounter with _$OjisanEncounter {
   const factory OjisanEncounter({
     required Ojisan ojisan,
     required DateTime encounterTime,

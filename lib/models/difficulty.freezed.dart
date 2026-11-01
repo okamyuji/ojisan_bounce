@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'difficulty.dart';
@@ -9,353 +9,301 @@ part of 'difficulty.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-DifficultySettings _$DifficultySettingsFromJson(Map<String, dynamic> json) {
-  return _DifficultySettings.fromJson(json);
-}
 
 /// @nodoc
 mixin _$DifficultySettings {
-  DifficultyLevel get level => throw _privateConstructorUsedError;
-  double get perfectThreshold => throw _privateConstructorUsedError;
-  double get greatThreshold => throw _privateConstructorUsedError;
-  double get goodThreshold => throw _privateConstructorUsedError;
-  double get ojisanSpawnRate => throw _privateConstructorUsedError;
-  int get maxTurns => throw _privateConstructorUsedError;
-  int get targetJusticePoints => throw _privateConstructorUsedError;
-  int get minOjisanDefeated => throw _privateConstructorUsedError;
-  int get optimalTimingBase => throw _privateConstructorUsedError;
+
+ DifficultyLevel get level; double get perfectThreshold; double get greatThreshold; double get goodThreshold; double get ojisanSpawnRate; int get maxTurns; int get targetJusticePoints; int get minOjisanDefeated; int get optimalTimingBase;
+/// Create a copy of DifficultySettings
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DifficultySettingsCopyWith<DifficultySettings> get copyWith => _$DifficultySettingsCopyWithImpl<DifficultySettings>(this as DifficultySettings, _$identity);
 
   /// Serializes this DifficultySettings to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of DifficultySettings
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $DifficultySettingsCopyWith<DifficultySettings> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as DifficultySettings;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DifficultySettings&&(identical(other.level, _this.level) || other.level == _this.level)&&(identical(other.perfectThreshold, _this.perfectThreshold) || other.perfectThreshold == _this.perfectThreshold)&&(identical(other.greatThreshold, _this.greatThreshold) || other.greatThreshold == _this.greatThreshold)&&(identical(other.goodThreshold, _this.goodThreshold) || other.goodThreshold == _this.goodThreshold)&&(identical(other.ojisanSpawnRate, _this.ojisanSpawnRate) || other.ojisanSpawnRate == _this.ojisanSpawnRate)&&(identical(other.maxTurns, _this.maxTurns) || other.maxTurns == _this.maxTurns)&&(identical(other.targetJusticePoints, _this.targetJusticePoints) || other.targetJusticePoints == _this.targetJusticePoints)&&(identical(other.minOjisanDefeated, _this.minOjisanDefeated) || other.minOjisanDefeated == _this.minOjisanDefeated)&&(identical(other.optimalTimingBase, _this.optimalTimingBase) || other.optimalTimingBase == _this.optimalTimingBase));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as DifficultySettings;
+  return Object.hash(runtimeType,_this.level,_this.perfectThreshold,_this.greatThreshold,_this.goodThreshold,_this.ojisanSpawnRate,_this.maxTurns,_this.targetJusticePoints,_this.minOjisanDefeated,_this.optimalTimingBase);
+}
+
+@override
+String toString() {
+  final _this = this as DifficultySettings;
+  return 'DifficultySettings(level: ${_this.level}, perfectThreshold: ${_this.perfectThreshold}, greatThreshold: ${_this.greatThreshold}, goodThreshold: ${_this.goodThreshold}, ojisanSpawnRate: ${_this.ojisanSpawnRate}, maxTurns: ${_this.maxTurns}, targetJusticePoints: ${_this.targetJusticePoints}, minOjisanDefeated: ${_this.minOjisanDefeated}, optimalTimingBase: ${_this.optimalTimingBase})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $DifficultySettingsCopyWith<$Res> {
-  factory $DifficultySettingsCopyWith(
-    DifficultySettings value,
-    $Res Function(DifficultySettings) then,
-  ) = _$DifficultySettingsCopyWithImpl<$Res, DifficultySettings>;
-  @useResult
-  $Res call({
-    DifficultyLevel level,
-    double perfectThreshold,
-    double greatThreshold,
-    double goodThreshold,
-    double ojisanSpawnRate,
-    int maxTurns,
-    int targetJusticePoints,
-    int minOjisanDefeated,
-    int optimalTimingBase,
-  });
-}
+abstract mixin class $DifficultySettingsCopyWith<$Res>  {
+  factory $DifficultySettingsCopyWith(DifficultySettings value, $Res Function(DifficultySettings) _then) = _$DifficultySettingsCopyWithImpl;
+@useResult
+$Res call({
+ DifficultyLevel level, double perfectThreshold, double greatThreshold, double goodThreshold, double ojisanSpawnRate, int maxTurns, int targetJusticePoints, int minOjisanDefeated, int optimalTimingBase
+});
 
+
+
+
+}
 /// @nodoc
-class _$DifficultySettingsCopyWithImpl<$Res, $Val extends DifficultySettings>
+class _$DifficultySettingsCopyWithImpl<$Res>
     implements $DifficultySettingsCopyWith<$Res> {
-  _$DifficultySettingsCopyWithImpl(this._value, this._then);
+  _$DifficultySettingsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final DifficultySettings _self;
+  final $Res Function(DifficultySettings) _then;
 
-  /// Create a copy of DifficultySettings
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? level = null,
-    Object? perfectThreshold = null,
-    Object? greatThreshold = null,
-    Object? goodThreshold = null,
-    Object? ojisanSpawnRate = null,
-    Object? maxTurns = null,
-    Object? targetJusticePoints = null,
-    Object? minOjisanDefeated = null,
-    Object? optimalTimingBase = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            level: null == level
-                ? _value.level
-                : level // ignore: cast_nullable_to_non_nullable
-                      as DifficultyLevel,
-            perfectThreshold: null == perfectThreshold
-                ? _value.perfectThreshold
-                : perfectThreshold // ignore: cast_nullable_to_non_nullable
-                      as double,
-            greatThreshold: null == greatThreshold
-                ? _value.greatThreshold
-                : greatThreshold // ignore: cast_nullable_to_non_nullable
-                      as double,
-            goodThreshold: null == goodThreshold
-                ? _value.goodThreshold
-                : goodThreshold // ignore: cast_nullable_to_non_nullable
-                      as double,
-            ojisanSpawnRate: null == ojisanSpawnRate
-                ? _value.ojisanSpawnRate
-                : ojisanSpawnRate // ignore: cast_nullable_to_non_nullable
-                      as double,
-            maxTurns: null == maxTurns
-                ? _value.maxTurns
-                : maxTurns // ignore: cast_nullable_to_non_nullable
-                      as int,
-            targetJusticePoints: null == targetJusticePoints
-                ? _value.targetJusticePoints
-                : targetJusticePoints // ignore: cast_nullable_to_non_nullable
-                      as int,
-            minOjisanDefeated: null == minOjisanDefeated
-                ? _value.minOjisanDefeated
-                : minOjisanDefeated // ignore: cast_nullable_to_non_nullable
-                      as int,
-            optimalTimingBase: null == optimalTimingBase
-                ? _value.optimalTimingBase
-                : optimalTimingBase // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of DifficultySettings
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? level = null,Object? perfectThreshold = null,Object? greatThreshold = null,Object? goodThreshold = null,Object? ojisanSpawnRate = null,Object? maxTurns = null,Object? targetJusticePoints = null,Object? minOjisanDefeated = null,Object? optimalTimingBase = null,}) {
+  return _then(DifficultySettings(
+level: null == level ? _self.level : level // ignore: cast_nullable_to_non_nullable
+as DifficultyLevel,perfectThreshold: null == perfectThreshold ? _self.perfectThreshold : perfectThreshold // ignore: cast_nullable_to_non_nullable
+as double,greatThreshold: null == greatThreshold ? _self.greatThreshold : greatThreshold // ignore: cast_nullable_to_non_nullable
+as double,goodThreshold: null == goodThreshold ? _self.goodThreshold : goodThreshold // ignore: cast_nullable_to_non_nullable
+as double,ojisanSpawnRate: null == ojisanSpawnRate ? _self.ojisanSpawnRate : ojisanSpawnRate // ignore: cast_nullable_to_non_nullable
+as double,maxTurns: null == maxTurns ? _self.maxTurns : maxTurns // ignore: cast_nullable_to_non_nullable
+as int,targetJusticePoints: null == targetJusticePoints ? _self.targetJusticePoints : targetJusticePoints // ignore: cast_nullable_to_non_nullable
+as int,minOjisanDefeated: null == minOjisanDefeated ? _self.minOjisanDefeated : minOjisanDefeated // ignore: cast_nullable_to_non_nullable
+as int,optimalTimingBase: null == optimalTimingBase ? _self.optimalTimingBase : optimalTimingBase // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$DifficultySettingsImplCopyWith<$Res>
-    implements $DifficultySettingsCopyWith<$Res> {
-  factory _$$DifficultySettingsImplCopyWith(
-    _$DifficultySettingsImpl value,
-    $Res Function(_$DifficultySettingsImpl) then,
-  ) = __$$DifficultySettingsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    DifficultyLevel level,
-    double perfectThreshold,
-    double greatThreshold,
-    double goodThreshold,
-    double ojisanSpawnRate,
-    int maxTurns,
-    int targetJusticePoints,
-    int minOjisanDefeated,
-    int optimalTimingBase,
-  });
 }
 
-/// @nodoc
-class __$$DifficultySettingsImplCopyWithImpl<$Res>
-    extends _$DifficultySettingsCopyWithImpl<$Res, _$DifficultySettingsImpl>
-    implements _$$DifficultySettingsImplCopyWith<$Res> {
-  __$$DifficultySettingsImplCopyWithImpl(
-    _$DifficultySettingsImpl _value,
-    $Res Function(_$DifficultySettingsImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of DifficultySettings
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? level = null,
-    Object? perfectThreshold = null,
-    Object? greatThreshold = null,
-    Object? goodThreshold = null,
-    Object? ojisanSpawnRate = null,
-    Object? maxTurns = null,
-    Object? targetJusticePoints = null,
-    Object? minOjisanDefeated = null,
-    Object? optimalTimingBase = null,
-  }) {
-    return _then(
-      _$DifficultySettingsImpl(
-        level: null == level
-            ? _value.level
-            : level // ignore: cast_nullable_to_non_nullable
-                  as DifficultyLevel,
-        perfectThreshold: null == perfectThreshold
-            ? _value.perfectThreshold
-            : perfectThreshold // ignore: cast_nullable_to_non_nullable
-                  as double,
-        greatThreshold: null == greatThreshold
-            ? _value.greatThreshold
-            : greatThreshold // ignore: cast_nullable_to_non_nullable
-                  as double,
-        goodThreshold: null == goodThreshold
-            ? _value.goodThreshold
-            : goodThreshold // ignore: cast_nullable_to_non_nullable
-                  as double,
-        ojisanSpawnRate: null == ojisanSpawnRate
-            ? _value.ojisanSpawnRate
-            : ojisanSpawnRate // ignore: cast_nullable_to_non_nullable
-                  as double,
-        maxTurns: null == maxTurns
-            ? _value.maxTurns
-            : maxTurns // ignore: cast_nullable_to_non_nullable
-                  as int,
-        targetJusticePoints: null == targetJusticePoints
-            ? _value.targetJusticePoints
-            : targetJusticePoints // ignore: cast_nullable_to_non_nullable
-                  as int,
-        minOjisanDefeated: null == minOjisanDefeated
-            ? _value.minOjisanDefeated
-            : minOjisanDefeated // ignore: cast_nullable_to_non_nullable
-                  as int,
-        optimalTimingBase: null == optimalTimingBase
-            ? _value.optimalTimingBase
-            : optimalTimingBase // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [DifficultySettings].
+extension DifficultySettingsPatterns on DifficultySettings {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DifficultySettings value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _DifficultySettings() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DifficultySettings value)  $default,){
+final _that = this;
+switch (_that) {
+case _DifficultySettings():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DifficultySettings value)?  $default,){
+final _that = this;
+switch (_that) {
+case _DifficultySettings() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DifficultyLevel level,  double perfectThreshold,  double greatThreshold,  double goodThreshold,  double ojisanSpawnRate,  int maxTurns,  int targetJusticePoints,  int minOjisanDefeated,  int optimalTimingBase)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _DifficultySettings() when $default != null:
+return $default(_that.level,_that.perfectThreshold,_that.greatThreshold,_that.goodThreshold,_that.ojisanSpawnRate,_that.maxTurns,_that.targetJusticePoints,_that.minOjisanDefeated,_that.optimalTimingBase);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DifficultyLevel level,  double perfectThreshold,  double greatThreshold,  double goodThreshold,  double ojisanSpawnRate,  int maxTurns,  int targetJusticePoints,  int minOjisanDefeated,  int optimalTimingBase)  $default,) {final _that = this;
+switch (_that) {
+case _DifficultySettings():
+return $default(_that.level,_that.perfectThreshold,_that.greatThreshold,_that.goodThreshold,_that.ojisanSpawnRate,_that.maxTurns,_that.targetJusticePoints,_that.minOjisanDefeated,_that.optimalTimingBase);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DifficultyLevel level,  double perfectThreshold,  double greatThreshold,  double goodThreshold,  double ojisanSpawnRate,  int maxTurns,  int targetJusticePoints,  int minOjisanDefeated,  int optimalTimingBase)?  $default,) {final _that = this;
+switch (_that) {
+case _DifficultySettings() when $default != null:
+return $default(_that.level,_that.perfectThreshold,_that.greatThreshold,_that.goodThreshold,_that.ojisanSpawnRate,_that.maxTurns,_that.targetJusticePoints,_that.minOjisanDefeated,_that.optimalTimingBase);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$DifficultySettingsImpl implements _DifficultySettings {
-  const _$DifficultySettingsImpl({
-    required this.level,
-    required this.perfectThreshold,
-    required this.greatThreshold,
-    required this.goodThreshold,
-    required this.ojisanSpawnRate,
-    required this.maxTurns,
-    required this.targetJusticePoints,
-    required this.minOjisanDefeated,
-    required this.optimalTimingBase,
-  });
 
-  factory _$DifficultySettingsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DifficultySettingsImplFromJson(json);
+class _DifficultySettings implements DifficultySettings {
+  const _DifficultySettings({required this.level, required this.perfectThreshold, required this.greatThreshold, required this.goodThreshold, required this.ojisanSpawnRate, required this.maxTurns, required this.targetJusticePoints, required this.minOjisanDefeated, required this.optimalTimingBase});
+  factory _DifficultySettings.fromJson(Map<String, dynamic> json) => _$DifficultySettingsFromJson(json);
 
-  @override
-  final DifficultyLevel level;
-  @override
-  final double perfectThreshold;
-  @override
-  final double greatThreshold;
-  @override
-  final double goodThreshold;
-  @override
-  final double ojisanSpawnRate;
-  @override
-  final int maxTurns;
-  @override
-  final int targetJusticePoints;
-  @override
-  final int minOjisanDefeated;
-  @override
-  final int optimalTimingBase;
+@override final  DifficultyLevel level;
+@override final  double perfectThreshold;
+@override final  double greatThreshold;
+@override final  double goodThreshold;
+@override final  double ojisanSpawnRate;
+@override final  int maxTurns;
+@override final  int targetJusticePoints;
+@override final  int minOjisanDefeated;
+@override final  int optimalTimingBase;
 
-  @override
-  String toString() {
+/// Create a copy of DifficultySettings
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$DifficultySettingsCopyWith<_DifficultySettings> get copyWith => __$DifficultySettingsCopyWithImpl<_DifficultySettings>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$DifficultySettingsToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _DifficultySettings&&(identical(other.level, level) || other.level == level)&&(identical(other.perfectThreshold, perfectThreshold) || other.perfectThreshold == perfectThreshold)&&(identical(other.greatThreshold, greatThreshold) || other.greatThreshold == greatThreshold)&&(identical(other.goodThreshold, goodThreshold) || other.goodThreshold == goodThreshold)&&(identical(other.ojisanSpawnRate, ojisanSpawnRate) || other.ojisanSpawnRate == ojisanSpawnRate)&&(identical(other.maxTurns, maxTurns) || other.maxTurns == maxTurns)&&(identical(other.targetJusticePoints, targetJusticePoints) || other.targetJusticePoints == targetJusticePoints)&&(identical(other.minOjisanDefeated, minOjisanDefeated) || other.minOjisanDefeated == minOjisanDefeated)&&(identical(other.optimalTimingBase, optimalTimingBase) || other.optimalTimingBase == optimalTimingBase));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,level,perfectThreshold,greatThreshold,goodThreshold,ojisanSpawnRate,maxTurns,targetJusticePoints,minOjisanDefeated,optimalTimingBase);
+}
+
+@override
+String toString() {
     return 'DifficultySettings(level: $level, perfectThreshold: $perfectThreshold, greatThreshold: $greatThreshold, goodThreshold: $goodThreshold, ojisanSpawnRate: $ojisanSpawnRate, maxTurns: $maxTurns, targetJusticePoints: $targetJusticePoints, minOjisanDefeated: $minOjisanDefeated, optimalTimingBase: $optimalTimingBase)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DifficultySettingsImpl &&
-            (identical(other.level, level) || other.level == level) &&
-            (identical(other.perfectThreshold, perfectThreshold) ||
-                other.perfectThreshold == perfectThreshold) &&
-            (identical(other.greatThreshold, greatThreshold) ||
-                other.greatThreshold == greatThreshold) &&
-            (identical(other.goodThreshold, goodThreshold) ||
-                other.goodThreshold == goodThreshold) &&
-            (identical(other.ojisanSpawnRate, ojisanSpawnRate) ||
-                other.ojisanSpawnRate == ojisanSpawnRate) &&
-            (identical(other.maxTurns, maxTurns) ||
-                other.maxTurns == maxTurns) &&
-            (identical(other.targetJusticePoints, targetJusticePoints) ||
-                other.targetJusticePoints == targetJusticePoints) &&
-            (identical(other.minOjisanDefeated, minOjisanDefeated) ||
-                other.minOjisanDefeated == minOjisanDefeated) &&
-            (identical(other.optimalTimingBase, optimalTimingBase) ||
-                other.optimalTimingBase == optimalTimingBase));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    level,
-    perfectThreshold,
-    greatThreshold,
-    goodThreshold,
-    ojisanSpawnRate,
-    maxTurns,
-    targetJusticePoints,
-    minOjisanDefeated,
-    optimalTimingBase,
-  );
-
-  /// Create a copy of DifficultySettings
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DifficultySettingsImplCopyWith<_$DifficultySettingsImpl> get copyWith =>
-      __$$DifficultySettingsImplCopyWithImpl<_$DifficultySettingsImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DifficultySettingsImplToJson(this);
-  }
 }
 
-abstract class _DifficultySettings implements DifficultySettings {
-  const factory _DifficultySettings({
-    required final DifficultyLevel level,
-    required final double perfectThreshold,
-    required final double greatThreshold,
-    required final double goodThreshold,
-    required final double ojisanSpawnRate,
-    required final int maxTurns,
-    required final int targetJusticePoints,
-    required final int minOjisanDefeated,
-    required final int optimalTimingBase,
-  }) = _$DifficultySettingsImpl;
 
-  factory _DifficultySettings.fromJson(Map<String, dynamic> json) =
-      _$DifficultySettingsImpl.fromJson;
-
-  @override
-  DifficultyLevel get level;
-  @override
-  double get perfectThreshold;
-  @override
-  double get greatThreshold;
-  @override
-  double get goodThreshold;
-  @override
-  double get ojisanSpawnRate;
-  @override
-  int get maxTurns;
-  @override
-  int get targetJusticePoints;
-  @override
-  int get minOjisanDefeated;
-  @override
-  int get optimalTimingBase;
-
-  /// Create a copy of DifficultySettings
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DifficultySettingsImplCopyWith<_$DifficultySettingsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$DifficultySettingsCopyWith<$Res> implements $DifficultySettingsCopyWith<$Res> {
+  factory _$DifficultySettingsCopyWith(_DifficultySettings value, $Res Function(_DifficultySettings) _then) = __$DifficultySettingsCopyWithImpl;
+@override @useResult
+$Res call({
+ DifficultyLevel level, double perfectThreshold, double greatThreshold, double goodThreshold, double ojisanSpawnRate, int maxTurns, int targetJusticePoints, int minOjisanDefeated, int optimalTimingBase
+});
+
+
+
+
+}
+/// @nodoc
+class __$DifficultySettingsCopyWithImpl<$Res>
+    implements _$DifficultySettingsCopyWith<$Res> {
+  __$DifficultySettingsCopyWithImpl(this._self, this._then);
+
+  final _DifficultySettings _self;
+  final $Res Function(_DifficultySettings) _then;
+
+/// Create a copy of DifficultySettings
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? level = null,Object? perfectThreshold = null,Object? greatThreshold = null,Object? goodThreshold = null,Object? ojisanSpawnRate = null,Object? maxTurns = null,Object? targetJusticePoints = null,Object? minOjisanDefeated = null,Object? optimalTimingBase = null,}) {
+  return _then(_DifficultySettings(
+level: null == level ? _self.level : level // ignore: cast_nullable_to_non_nullable
+as DifficultyLevel,perfectThreshold: null == perfectThreshold ? _self.perfectThreshold : perfectThreshold // ignore: cast_nullable_to_non_nullable
+as double,greatThreshold: null == greatThreshold ? _self.greatThreshold : greatThreshold // ignore: cast_nullable_to_non_nullable
+as double,goodThreshold: null == goodThreshold ? _self.goodThreshold : goodThreshold // ignore: cast_nullable_to_non_nullable
+as double,ojisanSpawnRate: null == ojisanSpawnRate ? _self.ojisanSpawnRate : ojisanSpawnRate // ignore: cast_nullable_to_non_nullable
+as double,maxTurns: null == maxTurns ? _self.maxTurns : maxTurns // ignore: cast_nullable_to_non_nullable
+as int,targetJusticePoints: null == targetJusticePoints ? _self.targetJusticePoints : targetJusticePoints // ignore: cast_nullable_to_non_nullable
+as int,minOjisanDefeated: null == minOjisanDefeated ? _self.minOjisanDefeated : minOjisanDefeated // ignore: cast_nullable_to_non_nullable
+as int,optimalTimingBase: null == optimalTimingBase ? _self.optimalTimingBase : optimalTimingBase // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

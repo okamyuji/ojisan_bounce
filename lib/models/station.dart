@@ -8,7 +8,7 @@ part 'station.g.dart';
 
 /// 駅モデル
 @freezed
-class Station with _$Station {
+abstract class Station with _$Station {
   const factory Station({
     required int id,
     required String name,
@@ -24,7 +24,7 @@ class Station with _$Station {
 
 /// 駅間の接続情報
 @freezed
-class StationConnection with _$StationConnection {
+abstract class StationConnection with _$StationConnection {
   const factory StationConnection({required int fromId, required int toId}) =
       _StationConnection;
 

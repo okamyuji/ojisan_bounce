@@ -11,7 +11,7 @@ enum DifficultyLevel { easy, normal, hard }
 
 /// 難易度設定
 @freezed
-class DifficultySettings with _$DifficultySettings {
+abstract class DifficultySettings with _$DifficultySettings {
   const factory DifficultySettings({
     required DifficultyLevel level,
     required double perfectThreshold,

@@ -24,7 +24,7 @@ enum GamePhase {
 
 /// ゲーム状態
 @freezed
-class GameState with _$GameState {
+abstract class GameState with _$GameState {
   const factory GameState({
     required Player player,
     required List<Station> stations,

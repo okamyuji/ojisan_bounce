@@ -8,7 +8,7 @@ part 'player.g.dart';
 
 /// プレイヤーモデル
 @freezed
-class Player with _$Player {
+abstract class Player with _$Player {
   const factory Player({
     @Default(0) int currentStationId, // 現在の駅ID
     @Default(0) int justicePoints, // ポイント
