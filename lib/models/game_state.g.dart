@@ -6,31 +6,30 @@ part of 'game_state.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GameStateImpl _$$GameStateImplFromJson(Map<String, dynamic> json) =>
-    _$GameStateImpl(
-      player: Player.fromJson(json['player'] as Map<String, dynamic>),
-      stations: (json['stations'] as List<dynamic>)
-          .map((e) => Station.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      phase: $enumDecode(_$GamePhaseEnumMap, json['phase']),
-      difficulty: DifficultySettings.fromJson(
-        json['difficulty'] as Map<String, dynamic>,
-      ),
-      currentDiceValue: (json['currentDiceValue'] as num?)?.toInt(),
-      currentEncounter: json['currentEncounter'] == null
-          ? null
-          : OjisanEncounter.fromJson(
-              json['currentEncounter'] as Map<String, dynamic>,
-            ),
-      encounterHistory:
-          (json['encounterHistory'] as List<dynamic>?)
-              ?.map((e) => OjisanEncounter.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-      isGameWon: json['isGameWon'] as bool? ?? false,
-    );
+_GameState _$GameStateFromJson(Map<String, dynamic> json) => _GameState(
+  player: Player.fromJson(json['player'] as Map<String, dynamic>),
+  stations: (json['stations'] as List<dynamic>)
+      .map((e) => Station.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  phase: $enumDecode(_$GamePhaseEnumMap, json['phase']),
+  difficulty: DifficultySettings.fromJson(
+    json['difficulty'] as Map<String, dynamic>,
+  ),
+  currentDiceValue: (json['currentDiceValue'] as num?)?.toInt() ?? null,
+  currentEncounter: json['currentEncounter'] == null
+      ? null
+      : OjisanEncounter.fromJson(
+          json['currentEncounter'] as Map<String, dynamic>,
+        ),
+  encounterHistory:
+      (json['encounterHistory'] as List<dynamic>?)
+          ?.map((e) => OjisanEncounter.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
+  isGameWon: json['isGameWon'] as bool? ?? false,
+);
 
-Map<String, dynamic> _$$GameStateImplToJson(_$GameStateImpl instance) =>
+Map<String, dynamic> _$GameStateToJson(_GameState instance) =>
     <String, dynamic>{
       'player': instance.player,
       'stations': instance.stations,

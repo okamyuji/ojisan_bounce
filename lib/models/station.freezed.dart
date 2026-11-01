@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'station.dart';
@@ -9,440 +9,565 @@ part of 'station.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
-
-Station _$StationFromJson(Map<String, dynamic> json) {
-  return _Station.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Station {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  double get x => throw _privateConstructorUsedError; // 画面上のX座標（0.0-1.0）
-  double get y => throw _privateConstructorUsedError; // 画面上のY座標（0.0-1.0）
-  String get emoji => throw _privateConstructorUsedError;
-  bool get visited => throw _privateConstructorUsedError;
+
+ int get id; String get name; double get x; double get y; String get emoji; bool get visited;
+/// Create a copy of Station
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$StationCopyWith<Station> get copyWith => _$StationCopyWithImpl<Station>(this as Station, _$identity);
 
   /// Serializes this Station to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Station
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $StationCopyWith<Station> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Station;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Station&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.x, _this.x) || other.x == _this.x)&&(identical(other.y, _this.y) || other.y == _this.y)&&(identical(other.emoji, _this.emoji) || other.emoji == _this.emoji)&&(identical(other.visited, _this.visited) || other.visited == _this.visited));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as Station;
+  return Object.hash(runtimeType,_this.id,_this.name,_this.x,_this.y,_this.emoji,_this.visited);
+}
+
+@override
+String toString() {
+  final _this = this as Station;
+  return 'Station(id: ${_this.id}, name: ${_this.name}, x: ${_this.x}, y: ${_this.y}, emoji: ${_this.emoji}, visited: ${_this.visited})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $StationCopyWith<$Res> {
-  factory $StationCopyWith(Station value, $Res Function(Station) then) =
-      _$StationCopyWithImpl<$Res, Station>;
-  @useResult
-  $Res call({
-    int id,
-    String name,
-    double x,
-    double y,
-    String emoji,
-    bool visited,
-  });
-}
+abstract mixin class $StationCopyWith<$Res>  {
+  factory $StationCopyWith(Station value, $Res Function(Station) _then) = _$StationCopyWithImpl;
+@useResult
+$Res call({
+ int id, String name, double x, double y, String emoji, bool visited
+});
 
+
+
+
+}
 /// @nodoc
-class _$StationCopyWithImpl<$Res, $Val extends Station>
+class _$StationCopyWithImpl<$Res>
     implements $StationCopyWith<$Res> {
-  _$StationCopyWithImpl(this._value, this._then);
+  _$StationCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Station _self;
+  final $Res Function(Station) _then;
 
-  /// Create a copy of Station
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? x = null,
-    Object? y = null,
-    Object? emoji = null,
-    Object? visited = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            id: null == id
-                ? _value.id
-                : id // ignore: cast_nullable_to_non_nullable
-                      as int,
-            name: null == name
-                ? _value.name
-                : name // ignore: cast_nullable_to_non_nullable
-                      as String,
-            x: null == x
-                ? _value.x
-                : x // ignore: cast_nullable_to_non_nullable
-                      as double,
-            y: null == y
-                ? _value.y
-                : y // ignore: cast_nullable_to_non_nullable
-                      as double,
-            emoji: null == emoji
-                ? _value.emoji
-                : emoji // ignore: cast_nullable_to_non_nullable
-                      as String,
-            visited: null == visited
-                ? _value.visited
-                : visited // ignore: cast_nullable_to_non_nullable
-                      as bool,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of Station
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? x = null,Object? y = null,Object? emoji = null,Object? visited = null,}) {
+  return _then(Station(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,x: null == x ? _self.x : x // ignore: cast_nullable_to_non_nullable
+as double,y: null == y ? _self.y : y // ignore: cast_nullable_to_non_nullable
+as double,emoji: null == emoji ? _self.emoji : emoji // ignore: cast_nullable_to_non_nullable
+as String,visited: null == visited ? _self.visited : visited // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-abstract class _$$StationImplCopyWith<$Res> implements $StationCopyWith<$Res> {
-  factory _$$StationImplCopyWith(
-    _$StationImpl value,
-    $Res Function(_$StationImpl) then,
-  ) = __$$StationImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    int id,
-    String name,
-    double x,
-    double y,
-    String emoji,
-    bool visited,
-  });
 }
 
-/// @nodoc
-class __$$StationImplCopyWithImpl<$Res>
-    extends _$StationCopyWithImpl<$Res, _$StationImpl>
-    implements _$$StationImplCopyWith<$Res> {
-  __$$StationImplCopyWithImpl(
-    _$StationImpl _value,
-    $Res Function(_$StationImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of Station
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? x = null,
-    Object? y = null,
-    Object? emoji = null,
-    Object? visited = null,
-  }) {
-    return _then(
-      _$StationImpl(
-        id: null == id
-            ? _value.id
-            : id // ignore: cast_nullable_to_non_nullable
-                  as int,
-        name: null == name
-            ? _value.name
-            : name // ignore: cast_nullable_to_non_nullable
-                  as String,
-        x: null == x
-            ? _value.x
-            : x // ignore: cast_nullable_to_non_nullable
-                  as double,
-        y: null == y
-            ? _value.y
-            : y // ignore: cast_nullable_to_non_nullable
-                  as double,
-        emoji: null == emoji
-            ? _value.emoji
-            : emoji // ignore: cast_nullable_to_non_nullable
-                  as String,
-        visited: null == visited
-            ? _value.visited
-            : visited // ignore: cast_nullable_to_non_nullable
-                  as bool,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [Station].
+extension StationPatterns on Station {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Station value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Station() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Station value)  $default,){
+final _that = this;
+switch (_that) {
+case _Station():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Station value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Station() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  String name,  double x,  double y,  String emoji,  bool visited)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Station() when $default != null:
+return $default(_that.id,_that.name,_that.x,_that.y,_that.emoji,_that.visited);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  String name,  double x,  double y,  String emoji,  bool visited)  $default,) {final _that = this;
+switch (_that) {
+case _Station():
+return $default(_that.id,_that.name,_that.x,_that.y,_that.emoji,_that.visited);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  String name,  double x,  double y,  String emoji,  bool visited)?  $default,) {final _that = this;
+switch (_that) {
+case _Station() when $default != null:
+return $default(_that.id,_that.name,_that.x,_that.y,_that.emoji,_that.visited);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$StationImpl implements _Station {
-  const _$StationImpl({
-    required this.id,
-    required this.name,
-    required this.x,
-    required this.y,
-    required this.emoji,
-    this.visited = false,
-  });
 
-  factory _$StationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StationImplFromJson(json);
+class _Station implements Station {
+  const _Station({required this.id, required this.name, required this.x, required this.y, required this.emoji, this.visited = false});
+  factory _Station.fromJson(Map<String, dynamic> json) => _$StationFromJson(json);
 
-  @override
-  final int id;
-  @override
-  final String name;
-  @override
-  final double x;
-  // 画面上のX座標（0.0-1.0）
-  @override
-  final double y;
-  // 画面上のY座標（0.0-1.0）
-  @override
-  final String emoji;
-  @override
-  @JsonKey()
-  final bool visited;
+@override final  int id;
+@override final  String name;
+@override final  double x;
+@override final  double y;
+@override final  String emoji;
+@override@JsonKey() final  bool visited;
 
-  @override
-  String toString() {
+/// Create a copy of Station
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$StationCopyWith<_Station> get copyWith => __$StationCopyWithImpl<_Station>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$StationToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Station&&(identical(other.id, id) || other.id == id)&&(identical(other.name, name) || other.name == name)&&(identical(other.x, x) || other.x == x)&&(identical(other.y, y) || other.y == y)&&(identical(other.emoji, emoji) || other.emoji == emoji)&&(identical(other.visited, visited) || other.visited == visited));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,id,name,x,y,emoji,visited);
+}
+
+@override
+String toString() {
     return 'Station(id: $id, name: $name, x: $x, y: $y, emoji: $emoji, visited: $visited)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StationImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.x, x) || other.x == x) &&
-            (identical(other.y, y) || other.y == y) &&
-            (identical(other.emoji, emoji) || other.emoji == emoji) &&
-            (identical(other.visited, visited) || other.visited == visited));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, name, x, y, emoji, visited);
-
-  /// Create a copy of Station
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StationImplCopyWith<_$StationImpl> get copyWith =>
-      __$$StationImplCopyWithImpl<_$StationImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$StationImplToJson(this);
-  }
 }
 
-abstract class _Station implements Station {
-  const factory _Station({
-    required final int id,
-    required final String name,
-    required final double x,
-    required final double y,
-    required final String emoji,
-    final bool visited,
-  }) = _$StationImpl;
 
-  factory _Station.fromJson(Map<String, dynamic> json) = _$StationImpl.fromJson;
-
-  @override
-  int get id;
-  @override
-  String get name;
-  @override
-  double get x; // 画面上のX座標（0.0-1.0）
-  @override
-  double get y; // 画面上のY座標（0.0-1.0）
-  @override
-  String get emoji;
-  @override
-  bool get visited;
-
-  /// Create a copy of Station
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StationImplCopyWith<_$StationImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
-StationConnection _$StationConnectionFromJson(Map<String, dynamic> json) {
-  return _StationConnection.fromJson(json);
+/// @nodoc
+abstract mixin class _$StationCopyWith<$Res> implements $StationCopyWith<$Res> {
+  factory _$StationCopyWith(_Station value, $Res Function(_Station) _then) = __$StationCopyWithImpl;
+@override @useResult
+$Res call({
+ int id, String name, double x, double y, String emoji, bool visited
+});
+
+
+
+
 }
+/// @nodoc
+class __$StationCopyWithImpl<$Res>
+    implements _$StationCopyWith<$Res> {
+  __$StationCopyWithImpl(this._self, this._then);
+
+  final _Station _self;
+  final $Res Function(_Station) _then;
+
+/// Create a copy of Station
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? x = null,Object? y = null,Object? emoji = null,Object? visited = null,}) {
+  return _then(_Station(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,x: null == x ? _self.x : x // ignore: cast_nullable_to_non_nullable
+as double,y: null == y ? _self.y : y // ignore: cast_nullable_to_non_nullable
+as double,emoji: null == emoji ? _self.emoji : emoji // ignore: cast_nullable_to_non_nullable
+as String,visited: null == visited ? _self.visited : visited // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$StationConnection {
-  int get fromId => throw _privateConstructorUsedError;
-  int get toId => throw _privateConstructorUsedError;
+
+ int get fromId; int get toId;
+/// Create a copy of StationConnection
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$StationConnectionCopyWith<StationConnection> get copyWith => _$StationConnectionCopyWithImpl<StationConnection>(this as StationConnection, _$identity);
 
   /// Serializes this StationConnection to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of StationConnection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $StationConnectionCopyWith<StationConnection> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as StationConnection;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StationConnection&&(identical(other.fromId, _this.fromId) || other.fromId == _this.fromId)&&(identical(other.toId, _this.toId) || other.toId == _this.toId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as StationConnection;
+  return Object.hash(runtimeType,_this.fromId,_this.toId);
+}
+
+@override
+String toString() {
+  final _this = this as StationConnection;
+  return 'StationConnection(fromId: ${_this.fromId}, toId: ${_this.toId})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $StationConnectionCopyWith<$Res> {
-  factory $StationConnectionCopyWith(
-    StationConnection value,
-    $Res Function(StationConnection) then,
-  ) = _$StationConnectionCopyWithImpl<$Res, StationConnection>;
-  @useResult
-  $Res call({int fromId, int toId});
-}
+abstract mixin class $StationConnectionCopyWith<$Res>  {
+  factory $StationConnectionCopyWith(StationConnection value, $Res Function(StationConnection) _then) = _$StationConnectionCopyWithImpl;
+@useResult
+$Res call({
+ int fromId, int toId
+});
 
+
+
+
+}
 /// @nodoc
-class _$StationConnectionCopyWithImpl<$Res, $Val extends StationConnection>
+class _$StationConnectionCopyWithImpl<$Res>
     implements $StationConnectionCopyWith<$Res> {
-  _$StationConnectionCopyWithImpl(this._value, this._then);
+  _$StationConnectionCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final StationConnection _self;
+  final $Res Function(StationConnection) _then;
 
-  /// Create a copy of StationConnection
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? fromId = null, Object? toId = null}) {
-    return _then(
-      _value.copyWith(
-            fromId: null == fromId
-                ? _value.fromId
-                : fromId // ignore: cast_nullable_to_non_nullable
-                      as int,
-            toId: null == toId
-                ? _value.toId
-                : toId // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
+/// Create a copy of StationConnection
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? fromId = null,Object? toId = null,}) {
+  return _then(StationConnection(
+fromId: null == fromId ? _self.fromId : fromId // ignore: cast_nullable_to_non_nullable
+as int,toId: null == toId ? _self.toId : toId // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-/// @nodoc
-abstract class _$$StationConnectionImplCopyWith<$Res>
-    implements $StationConnectionCopyWith<$Res> {
-  factory _$$StationConnectionImplCopyWith(
-    _$StationConnectionImpl value,
-    $Res Function(_$StationConnectionImpl) then,
-  ) = __$$StationConnectionImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int fromId, int toId});
 }
 
-/// @nodoc
-class __$$StationConnectionImplCopyWithImpl<$Res>
-    extends _$StationConnectionCopyWithImpl<$Res, _$StationConnectionImpl>
-    implements _$$StationConnectionImplCopyWith<$Res> {
-  __$$StationConnectionImplCopyWithImpl(
-    _$StationConnectionImpl _value,
-    $Res Function(_$StationConnectionImpl) _then,
-  ) : super(_value, _then);
 
-  /// Create a copy of StationConnection
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? fromId = null, Object? toId = null}) {
-    return _then(
-      _$StationConnectionImpl(
-        fromId: null == fromId
-            ? _value.fromId
-            : fromId // ignore: cast_nullable_to_non_nullable
-                  as int,
-        toId: null == toId
-            ? _value.toId
-            : toId // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
+/// Adds pattern-matching-related methods to [StationConnection].
+extension StationConnectionPatterns on StationConnection {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _StationConnection value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _StationConnection() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _StationConnection value)  $default,){
+final _that = this;
+switch (_that) {
+case _StationConnection():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _StationConnection value)?  $default,){
+final _that = this;
+switch (_that) {
+case _StationConnection() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int fromId,  int toId)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _StationConnection() when $default != null:
+return $default(_that.fromId,_that.toId);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int fromId,  int toId)  $default,) {final _that = this;
+switch (_that) {
+case _StationConnection():
+return $default(_that.fromId,_that.toId);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int fromId,  int toId)?  $default,) {final _that = this;
+switch (_that) {
+case _StationConnection() when $default != null:
+return $default(_that.fromId,_that.toId);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$StationConnectionImpl implements _StationConnection {
-  const _$StationConnectionImpl({required this.fromId, required this.toId});
 
-  factory _$StationConnectionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StationConnectionImplFromJson(json);
+class _StationConnection implements StationConnection {
+  const _StationConnection({required this.fromId, required this.toId});
+  factory _StationConnection.fromJson(Map<String, dynamic> json) => _$StationConnectionFromJson(json);
 
-  @override
-  final int fromId;
-  @override
-  final int toId;
+@override final  int fromId;
+@override final  int toId;
 
-  @override
-  String toString() {
+/// Create a copy of StationConnection
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$StationConnectionCopyWith<_StationConnection> get copyWith => __$StationConnectionCopyWithImpl<_StationConnection>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$StationConnectionToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _StationConnection&&(identical(other.fromId, fromId) || other.fromId == fromId)&&(identical(other.toId, toId) || other.toId == toId));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,fromId,toId);
+}
+
+@override
+String toString() {
     return 'StationConnection(fromId: $fromId, toId: $toId)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StationConnectionImpl &&
-            (identical(other.fromId, fromId) || other.fromId == fromId) &&
-            (identical(other.toId, toId) || other.toId == toId));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, fromId, toId);
-
-  /// Create a copy of StationConnection
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StationConnectionImplCopyWith<_$StationConnectionImpl> get copyWith =>
-      __$$StationConnectionImplCopyWithImpl<_$StationConnectionImpl>(
-        this,
-        _$identity,
-      );
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$StationConnectionImplToJson(this);
-  }
 }
 
-abstract class _StationConnection implements StationConnection {
-  const factory _StationConnection({
-    required final int fromId,
-    required final int toId,
-  }) = _$StationConnectionImpl;
 
-  factory _StationConnection.fromJson(Map<String, dynamic> json) =
-      _$StationConnectionImpl.fromJson;
-
-  @override
-  int get fromId;
-  @override
-  int get toId;
-
-  /// Create a copy of StationConnection
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StationConnectionImplCopyWith<_$StationConnectionImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$StationConnectionCopyWith<$Res> implements $StationConnectionCopyWith<$Res> {
+  factory _$StationConnectionCopyWith(_StationConnection value, $Res Function(_StationConnection) _then) = __$StationConnectionCopyWithImpl;
+@override @useResult
+$Res call({
+ int fromId, int toId
+});
+
+
+
+
+}
+/// @nodoc
+class __$StationConnectionCopyWithImpl<$Res>
+    implements _$StationConnectionCopyWith<$Res> {
+  __$StationConnectionCopyWithImpl(this._self, this._then);
+
+  final _StationConnection _self;
+  final $Res Function(_StationConnection) _then;
+
+/// Create a copy of StationConnection
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? fromId = null,Object? toId = null,}) {
+  return _then(_StationConnection(
+fromId: null == fromId ? _self.fromId : fromId // ignore: cast_nullable_to_non_nullable
+as int,toId: null == toId ? _self.toId : toId // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on
