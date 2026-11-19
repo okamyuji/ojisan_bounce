@@ -1,7 +1,7 @@
 /// チュートリアル画面
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ojisan_bounce/models/difficulty.dart';
 import 'package:ojisan_bounce/screens/game_screen.dart';
 import 'package:ojisan_bounce/utils/constants.dart';

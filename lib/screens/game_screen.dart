@@ -1,7 +1,7 @@
 /// メインゲーム画面
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ojisan_bounce/models/difficulty.dart';
 import 'package:ojisan_bounce/models/game_state.dart';

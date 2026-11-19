@@ -1,7 +1,7 @@
 /// おじさんバウンスゲーム
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ojisan_bounce/screens/title_screen.dart';
 import 'package:ojisan_bounce/utils/constants.dart';
