@@ -47,6 +47,7 @@ dependencies:
   # Audio
   audioplayers: ^6.8.1
 
+  material_ui: ^1.11.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

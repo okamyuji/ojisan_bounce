@@ -1,7 +1,7 @@
 /// 路線図ウィジェット
 library;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:ojisan_bounce/models/station.dart';
 import 'package:ojisan_bounce/utils/constants.dart';
 
